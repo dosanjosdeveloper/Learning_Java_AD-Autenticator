@@ -13,9 +13,9 @@ import java.util.Hashtable;
 public class ADAuthenticator {
 
  public static void main(String[] args) {
-        String username = "rafael.anjos"; // apenas o nome, sem domínio
+        String username = "dosanjos.developer"; // apenas o nome, sem domínio
         String password = "ads2025";
-        String domain = "supernorte"; // exemplo: empresa.local
+        String domain = "developer"; // exemplo: empresa.local
         String ldapHost = "ldap://192.168.1.99:389"; // exemplo: ldap://192.168.1.10:389
 
         authenticateUser(domain, username, password, ldapHost);
@@ -23,7 +23,7 @@ public class ADAuthenticator {
 
     public static void authenticateUser(String domain, String username, String password, String ldapHost) {
         String userPrincipal = domain + "\\" + username;
-//        String userPrincipal = "supernorte.local\\rafael.anjos";
+//        String userPrincipal = "developer.local\\dosanjos.developer";
 
         Hashtable<String, String> env = new Hashtable<>();
         env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
@@ -57,3 +57,4 @@ public class ADAuthenticator {
     }
     
 }
+
